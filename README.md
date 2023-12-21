@@ -1,5 +1,5 @@
 # Sistema-banco-simples
-# Projeto da Faculdade
+# Projeto 1
 
 A Atividade é a seguinte:
 
@@ -28,12 +28,12 @@ Crie o sistema em sub-rotinas para cada uma das funcionalidades.
 
 Exemplo do formato da listagem dos atendimento
 
-Nome: Nome Sobrenome  -  
-CPF: 123.123.123-11  -  
+Nome: Nome Sobrenome    
+CPF: 123.123.123-11   
 Tipo Atendimento - 1 - Abertura de Conta
 ===============================
-Nome: Nome Sobrenome  -  
-CPF: 123.123.123-11  -  
+Nome: Nome Sobrenome   
+CPF: 123.123.123-11   
 Tipo Atendimento - 2 - Gerente Pessoa Jurídica
 ===============================
 
