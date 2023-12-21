@@ -37,4 +37,7 @@ CPF: 123.123.123-11
 Tipo Atendimento - 2 - Gerente Pessoa Jurídica
 ===============================
 
+## Requerimento
+Para rodar o sistema de funcionários precisar ter o compilador **GNU GCC** instalado
+
 
