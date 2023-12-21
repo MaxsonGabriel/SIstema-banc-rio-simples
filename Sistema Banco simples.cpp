@@ -1,9 +1,6 @@
-/* 
-<<<<<<< HEAD
+/*
 	Atividade Sistema Banco Simples
-=======
-	Atividade: Sistema Banco Simples
->>>>>>> ccb554b152a14f55006c4b939510b4c73b8b799d
+	
 */
 
 
@@ -54,7 +51,7 @@ struct Caixa{
   int deposito;
 };
 
-//Declarando as funções:
+//Declarando as funçoes:
 void menu();
 void cadastrar(Cadastro* cadastro, Caixa* caixa);
 void listar(Cadastro* cadastro);
@@ -62,7 +59,7 @@ void listarSetor(Cadastro* cadastro);
 void AbreCaixa(Cadastro* cadastro, Caixa* caixa, struct CpfFornecido *cF);
 
 
-//Código Principal para Menu:
+//Codigo Principal para Menu:
 int main() {
   setlocale(LC_ALL, "Portuguese");
 
@@ -71,7 +68,7 @@ int main() {
   Caixa caixa;
   CpfFornecido fornecido;
   
-  //Faça menu até que o cliente escolha a opção 'sair': 
+  //Faca menu ate que o cliente escolha a opcao 'sair': 
   do{
 
 	system("cls");
@@ -95,7 +92,7 @@ int main() {
     	break;
       case 4: printf("Saindo do sistema...\n\n");
     	break;
-      default: printf("opção inválida!\n");
+      default: printf("opçao invalida!\n");
       
     }
 
@@ -107,7 +104,7 @@ int main() {
 
 
 
-//Desenvolvendo as funções que rodarão o código
+//Desenvolvendo as funÃ§Ãµes que rodarÃ£o o cÃ³digo
 
 //lista de menu:
 void menu(){
@@ -133,13 +130,13 @@ void cadastrar(Cadastro* cadastro, Caixa* caixa){
 	fflush(stdin);	
 	fgets(cadastro[qtdAtendimento].nome, sizeof(cadastro[qtdAtendimento].nome), stdin);
 	
-	//Remove a nova linha "\n" dado na fun��o 'fgets'
+	//Remove a nova linha "\n" dado na função 'fgets'
 	cadastro[qtdAtendimento].nome[strcspn(cadastro[qtdAtendimento].nome, "\n")] = '\0';
 	printf("\n");
 	
 		
-<<<<<<< HEAD
-	printf("CPF (Somente n�meros):\n");
+
+	printf("CPF (Somente números):\n");
 	scanf("%3d%3d%3d%2d", &(cadastro[qtdAtendimento].cpf.bloco1),&(cadastro[qtdAtendimento].cpf.bloco2),
 	&(cadastro[qtdAtendimento].cpf.bloco3), &(cadastro[qtdAtendimento].cpf.bloco4));
 	
@@ -148,52 +145,50 @@ void cadastrar(Cadastro* cadastro, Caixa* caixa){
 
 	
 		
-	printf("Ol� %s\n", cadastro[qtdAtendimento].nome);
-	printf("Agora que temos seus dados, podemos come�ar o atendimento!\n");
-=======
-	printf("Então %s, agora que temos seus dados, podemos começar o atendimento!\n", cadastro[qtdAtendimento].nome);
->>>>>>> ccb554b152a14f55006c4b939510b4c73b8b799d
+	printf("Olá %s\n", cadastro[qtdAtendimento].nome);
+	printf(" %s, agora que temos seus dados, podemos comeÃ§ar o atendimento!\n");
+
 	printf("\n");
 	system("pause");
 	system("cls");
 	
-	//Coletando o tipo de cadastro será efetuado:
+	//Coletando o tipo de cadastro serÃ¡ efetuado:
 	printf("Qual o tipo de atendimento deseja ser atendido?\n\n");
 	printf("1 - Abertura de conta:\n");
 	printf("2 - Caixa:\n");
-	printf("3 - Gerente pessoa física:\n");
-	printf("4 - Gerente Pessoa jurídica:\n");
+	printf("3 - Gerente pessoa fÃ­sica:\n");
+	printf("4 - Gerente Pessoa jurÃ­dica:\n");
 	printf("\n");
 	scanf("%d", &cadastro[qtdAtendimento].atendimento);
 	printf("\n");
 	fflush(stdin);
 	
-	//De acordo com a escolha do cliente, um dos caminhos será tomado:
+	//De acordo com a escolha do cliente, um dos caminhos serÃ¡ tomado:
 	switch(cadastro[qtdAtendimento].atendimento){
 		       case 1: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Abertura de conta");
-		               printf("Você escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
+		               printf("VocÃª escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
 		               printf("\n");
 		               system("pause");
 		        	break;
 		       case 2: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Caixa");
-		               printf("Você escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
+		               printf("VocÃª escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
 		               printf("\n");
 		               system("pause");
 		               AbreCaixa(&cadastro[qtdAtendimento], &caixa[qtdAtendimento], &cpfFornecido);
 		        	break;
-		       case 3: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa física");
-		        	   printf("Você escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
+		       case 3: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa fÃ­sica");
+		        	   printf("VocÃª escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
 		        	   printf("\n");
 		        	   system("pause");
 		        	break;
-		       case 4: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa jurídica");
-		               printf("Você escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
+		       case 4: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa jurÃ­dica");
+		               printf("VocÃª escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
 		               printf("\n");
 		               system("pause");
 		        	break;
 		        case 5: printf("Saindo do sistema...\n\n");
 		        	break;
-		       default: printf("opção inválida!\n\n");  
+		       default: printf("opÃ§Ã£o invÃ¡lida!\n\n");  
 			        
 	  	    }
 	  
@@ -229,21 +224,21 @@ void listarSetor(Cadastro* cadastro){
 	
 	system("cls");
 	
-	//Perguntando qual setor será listado:
+	//Perguntando qual setor serÃ¡ listado:
 	int x = 0;	
 	system("cls");
 	printf("listando clientes por setor:\n\n");
 	printf("Qual setor deseja listar?\n\n");
 	printf("1 - Abertura de conta:\n");
 	printf("2 - Caixa:\n");
-	printf("3 - Gerente pessoa física:\n");
-	printf("4 - Gerente Pessoa jurídica:\n\n");
+	printf("3 - Gerente pessoa fÃ­sica:\n");
+	printf("4 - Gerente Pessoa jurÃ­dica:\n\n");
 	scanf("%d", &x);
 	fflush(stdin);
 	printf("\n");
   
     /*
-	Listando de acordo com os cadastros já efetuados e 
+	Listando de acordo com os cadastros jÃ¡ efetuados e 
 	a escolha de atendimentos que o cliente deseja listar: */
 	
 	for(int i = 0; i < qtdAtendimento; i++){
@@ -273,7 +268,7 @@ void listarSetor(Cadastro* cadastro){
 	    }
 	    if(cadastro[i].atendimento == 3 && x == 3){
 <<<<<<< HEAD
-	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa f�sica");
+	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa física");
 	        printf("Nome: %s\n", cadastro[i].nome);
     		printf("CPF: %03d.%03d.%03d-%0d\n", cadastro[i].cpf.bloco1, 
 										cadastro[i].cpf.bloco2, 
@@ -285,7 +280,7 @@ void listarSetor(Cadastro* cadastro){
     		printf("--------------------------------\n");
 	    }
 	    if(cadastro[i].atendimento == 4 && x == 4){
-	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa jur�dica");
+	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa jurídica");
 	        printf("Nome: %s\n", cadastro[i].nome);
     		printf("CPF: %03d.%03d.%03d-%0d\n", cadastro[i].cpf.bloco1, 
 										cadastro[i].cpf.bloco2, 
@@ -296,14 +291,14 @@ void listarSetor(Cadastro* cadastro){
 									 		 cadastro[i].tipoAtendimento);
     		printf("--------------------------------\n");
 =======
-	      strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa física");
+	      strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa fÃ­sica");
 	      printf("Nome: %s\n", cadastro[i].nome);
 	      printf("CPF: %s\n", cadastro[i].cpf);
 	      printf("Atendimento: %d - %s\n", cadastro[i].atendimento, cadastro[i].tipoAtendimento);
 	      printf("------------------------------\n");
 	    }
 	    if(cadastro[i].atendimento == 4 && x == 4){
-	      strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa jurídica");
+	      strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa jurÃ­dica");
 	      printf("Nome: %s\n", cadastro[i].nome);
 	      printf("CPF: %s\n", cadastro[i].cpf);
 	      printf("Atendimento: %d - %s\n", cadastro[i].atendimento, cadastro[i].tipoAtendimento);
@@ -328,19 +323,19 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 	printf("Bem vindo ao caixa!\n\n");
 
 <<<<<<< HEAD
-  //Verifica se o CPF est� cadastrado:
+  //Verifica se o CPF está cadastrado:
 	
 	
-	printf("Digite seu CPF para confirma��o:\n");
+	printf("Digite seu CPF para confirmação:\n");
 	scanf("%3d%3d%3d%2d", &(cF->bloco1),&(cF->bloco2),
 	&(cF->bloco3), &(cF->bloco4));
 	
 	
 =======
-  //Verifica se o CPF está cadastrado:
+  //Verifica se o CPF estÃ¡ cadastrado:
 	char cpfcmp2[MaxCpf];
 	
-	printf("Digite seu CPF para confirmação:\n");
+	printf("Digite seu CPF para confirmaÃ§Ã£o:\n");
 	scanf("%s", cpfcmp2);
 >>>>>>> ccb554b152a14f55006c4b939510b4c73b8b799d
 	fflush(stdin);
@@ -352,9 +347,9 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
     
     
     /* 
-    Se o CPF já foi cadastrado, o cliente poderá realizar:
+    Se o CPF jÃ¡ foi cadastrado, o cliente poderÃ¡ realizar:
     - saque
-    - depósito
+    - depÃ³sito
     - checar o saldo em conta
     */
 
@@ -369,9 +364,9 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 				
 				
 				
-				printf("Ol� %s, o que deseja fazer?\n\n", cadastro[i].nome);
+				printf("Olá %s, o que deseja fazer?\n\n", cadastro[i].nome);
 			    printf("1 - Saque:\n");
-				printf("2 - Dep�sito:\n");
+				printf("2 - Depósito:\n");
 				printf("3 - Saldo:\n");
 				printf("4 - Sair...\n\n");
 				scanf("%d", &opc);
@@ -390,7 +385,7 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 							    caixa[i].saldo -= caixa[i].saque;
 							    printf("Saque realizado com sucesso!\n\n");
 							} else {
-							    printf("Saldo insuficiente! Fa�a um dep�sito!\n\n");
+							    printf("Saldo insuficiente! Faça um depósito!\n\n");
 							}
 							system("pause");
 							break;
@@ -405,25 +400,25 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 				            system("pause");
 				        	break;
 				        
-				    case 3: printf("Seu saldo atual �: R$ %d\n\n", caixa[i].saldo);
+				    case 3: printf("Seu saldo atual é: R$ %d\n\n", caixa[i].saldo);
 				        	system("pause");
 				        	break;
 				        
 				    case 4: printf("Saindo do sistema...\n\n");
 				        	break;
 				        
-				    default: printf("op��o inv�lida!\n\n");
+				    default: printf("opção inválida!\n\n");
 				        	 system("pause");    
 					}    
 		}else{
-			printf("Cpf n�o encontrado");
+			printf("Cpf não encontrado");
 			system ("pause");
 =======
     	
     	if(strcmp(cadastro[i].cpf, cpfcmp2) == 0){
-    		printf("Olá %s, o que deseja fazer?\n\n", cadastro[i].nome);
+    		printf("OlÃ¡ %s, o que deseja fazer?\n\n", cadastro[i].nome);
 	    	printf("1 - Saque:\n");
-		    printf("2 - Depósito:\n");
+		    printf("2 - DepÃ³sito:\n");
 		    printf("3 - Saldo:\n");
 		    printf("4 - Sair...\n\n");
 		    scanf("%d", &opc);
@@ -442,7 +437,7 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 					        caixa[i].saldo -= caixa[i].saque;
 					        printf("Saque realizado com sucesso!\n\n");
 					    } else {
-					        printf("Saldo insuficiente! Faça um depósito!\n\n");
+					        printf("Saldo insuficiente! FaÃ§a um depÃ³sito!\n\n");
 					    }
 					    system("pause");
 					    break;
@@ -457,14 +452,14 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 		                system("pause");
 		        	break;
 		        
-		        case 3: printf("Seu saldo atual é: R$ %d\n\n", caixa[i].saldo);
+		        case 3: printf("Seu saldo atual Ã©: R$ %d\n\n", caixa[i].saldo);
 		        		system("pause");
 		        	break;
 		        
 		        case 4: printf("Saindo do sistema...\n\n");
 		        	break;
 		        
-		        default: printf("opção inválida!\n\n");
+		        default: printf("opÃ§Ã£o invÃ¡lida!\n\n");
 		        	system("pause");
 		        
 			}
@@ -473,7 +468,7 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
         
         }
 		if(strcmp(cadastro[i].cpf, cpfcmp2) != 0){
-    		printf("CPF não encontrado!\n\n");
+    		printf("CPF nÃ£o encontrado!\n\n");
     		system("pause");
 >>>>>>> ccb554b152a14f55006c4b939510b4c73b8b799d
 		}
