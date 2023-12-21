@@ -3,12 +3,7 @@
 
 A Atividade é a seguinte:
 
-"Apesar de toda tecnologia disponível nos dias de hoje, o movimento em agências bancárias ainda é muito alto, 
-bancos como Banco do Brasil, Caixa Econômica, Itaú, Bradesco etc. possuem grande movimento de pessoas e também muitas filas,
-principalmente no começo de mês. Entretanto, nós como profissionais de tecnologia faremos muito ainda para diminuir tais atendimento, 
-tornando tudo mais virtual."
-
-Em contrapatida, enquanto isso não acontece, você foi contratado por um destes bancos para 
+Você foi contratado por um banco para 
 criar um sistema na linguagem 'C' de controle de atendimento presencial de clientes.
 
 Funcionalidades do sistema:
@@ -33,12 +28,13 @@ Crie o sistema em sub-rotinas para cada uma das funcionalidades.
 
 Exemplo do formato da listagem dos atendimento
 
-Nome: Rogério Napoleão Júnior
+Nome: Nome Sobrenome 
 CPF: 123.123.123-11
 Tipo Atendimento - 1 - Abertura de Conta
 ===============================
-Nome: João
+Nome: Nome Sobrenome
 CPF: 123.123.123-11
 Tipo Atendimento - 2 - Gerente Pessoa Jurídica
 ===============================
+
 
