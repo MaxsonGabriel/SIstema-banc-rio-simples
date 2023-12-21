@@ -26,7 +26,7 @@ Bem-vindo ao sistema de atendimento
 Crie o sistema em sub-rotinas para cada uma das funcionalidades.
 
 
-Exemplo do formato da listagem dos atendimento
+Exemplo do formato da listagem dos atendimento:
 
 Nome: Nome Sobrenome    
 CPF: 123.123.123-11   
