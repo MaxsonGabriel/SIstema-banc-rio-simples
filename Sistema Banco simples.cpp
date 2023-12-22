@@ -52,7 +52,11 @@ struct Caixa{
   int deposito;
 };
 
+<<<<<<< HEAD
 //Declarando as fun�oes:
+=======
+//Declarando as funçoes:
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 void menu();
 void cadastrar(Cadastro* cadastro, Caixa* caixa);
 void listar(Cadastro* cadastro);
@@ -69,7 +73,11 @@ int main() {
   Caixa caixa;
   CpfFornecido fornecido;
   
+<<<<<<< HEAD
   //Faca menu ate que o cliente escolha a op��o 'sair': 
+=======
+  //Faca menu ate que o cliente escolha a opcao 'sair': 
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
   do{
 
 	system("cls");
@@ -93,7 +101,11 @@ int main() {
     	break;
       case 4: printf("Saindo do sistema...\n\n");
     	break;
+<<<<<<< HEAD
       default: printf("op�ao invalida!\n");
+=======
+      default: printf("opçao invalida!\n");
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
       
     }
 
@@ -105,7 +117,11 @@ int main() {
 
 
 
+<<<<<<< HEAD
 //Desenvolvendo as fun��es que rodar�o o c�digo
+=======
+//Desenvolvendo as funÃ§Ãµes que rodarÃ£o o cÃ³digo
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 
 //lista de menu:
 void menu(){
@@ -131,13 +147,17 @@ void cadastrar(Cadastro* cadastro, Caixa* caixa){
 	fflush(stdin);	
 	fgets(cadastro[qtdAtendimento].nome, sizeof(cadastro[qtdAtendimento].nome), stdin);
 	
-	//Remove a nova linha "\n" dado na fun��o 'fgets'
+	//Remove a nova linha "\n" dado na função 'fgets'
 	cadastro[qtdAtendimento].nome[strcspn(cadastro[qtdAtendimento].nome, "\n")] = '\0';
 	printf("\n");
 	
 		
 
+<<<<<<< HEAD
 	printf("CPF (Somente n�meros):\n");
+=======
+	printf("CPF (Somente números):\n");
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 	scanf("%3d%3d%3d%2d", &(cadastro[qtdAtendimento].cpf.bloco1),&(cadastro[qtdAtendimento].cpf.bloco2),
 	&(cadastro[qtdAtendimento].cpf.bloco3), &(cadastro[qtdAtendimento].cpf.bloco4));
 	
@@ -146,19 +166,29 @@ void cadastrar(Cadastro* cadastro, Caixa* caixa){
 
 	
 		
+<<<<<<< HEAD
 	printf("Ol� %s\n", cadastro[qtdAtendimento].nome);
 	printf("Agora que temos seus dados, podemos come�ar o atendimento!\n");
+=======
+	printf("Olá %s\n", cadastro[qtdAtendimento].nome);
+	printf(" %s, agora que temos seus dados, podemos começar o atendimento!\n");
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 
 	printf("\n");
 	system("pause");
 	system("cls");
 	
-	//Coletando o tipo de cadastro será efetuado:
+	//Coletando o tipo de cadastro serÃ¡ efetuado:
 	printf("Qual o tipo de atendimento deseja ser atendido?\n\n");
 	printf("1 - Abertura de conta:\n");
 	printf("2 - Caixa:\n");
+<<<<<<< HEAD
 	printf("3 - Gerente pessoa f�sica:\n");
 	printf("4 - Gerente Pessoa jur�dica:\n");
+=======
+	printf("3 - Gerente pessoa fí­sica:\n");
+	printf("4 - Gerente Pessoa jurí­dica:\n");
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 	printf("\n");
 	scanf("%d", &cadastro[qtdAtendimento].atendimento);
 	printf("\n");
@@ -177,6 +207,7 @@ void cadastrar(Cadastro* cadastro, Caixa* caixa){
 		               system("pause");
 		               AbreCaixa(&cadastro[qtdAtendimento], &caixa[qtdAtendimento], &cpfFornecido);
 		        	break;
+<<<<<<< HEAD
 		       case 3: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa f�sica");
 		        	   printf("Voc� escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
 		        	   printf("\n");
@@ -184,6 +215,15 @@ void cadastrar(Cadastro* cadastro, Caixa* caixa){
 		        	break;
 		       case 4: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa jur�dica");
 		               printf("Voc� escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
+=======
+		       case 3: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa fÃ­sica");
+		        	   printf("Você escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
+		        	   printf("\n");
+		        	   system("pause");
+		        	break;
+		       case 4: strcpy(cadastro[qtdAtendimento].tipoAtendimento, "Gerente pessoa jurÃ­dica");
+		               printf("Você escolheu - %d - %s\n", cadastro[qtdAtendimento].atendimento, cadastro[qtdAtendimento].tipoAtendimento);
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 		               printf("\n");
 		               system("pause");
 		        	break;
@@ -232,14 +272,23 @@ void listarSetor(Cadastro* cadastro){
 	printf("Qual setor deseja listar?\n\n");
 	printf("1 - Abertura de conta:\n");
 	printf("2 - Caixa:\n");
+<<<<<<< HEAD
 	printf("3 - Gerente pessoa f�sica:\n");
 	printf("4 - Gerente Pessoa jur�dica:\n\n");
+=======
+	printf("3 - Gerente pessoa física:\n");
+	printf("4 - Gerente Pessoa jurí­dica:\n\n");
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 	scanf("%d", &x);
 	fflush(stdin);
 	printf("\n");
   
     /*
+<<<<<<< HEAD
 	Listando de acordo com os cadastros j� efetuados e 
+=======
+	Listando de acordo com os cadastros já¡ efetuados e 
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 	a escolha de atendimentos que o cliente deseja listar: */
 	
 	for(int i = 0; i < qtdAtendimento; i++){
@@ -272,9 +321,15 @@ void listarSetor(Cadastro* cadastro){
     	  printf("--------------------------------\n");
 	    }
 
+<<<<<<< HEAD
 		//Gerente pessoa f�sica
 	    if(cadastro[i].atendimento == 3 && x == 3){
 	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa f�sica");
+=======
+		//Gerente pessoa física
+	    if(cadastro[i].atendimento == 3 && x == 3){
+	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa física");
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 	        printf("Nome: %s\n", cadastro[i].nome);
     	  printf("CPF: %03d.%03d.%03d-%0d\n", cadastro[i].cpf.bloco1, 
 					      cadastro[i].cpf.bloco2, 
@@ -286,9 +341,13 @@ void listarSetor(Cadastro* cadastro){
     	  printf("--------------------------------\n");
 	    }
 
+<<<<<<< HEAD
 		//Gerente pessoa jur�dica
+=======
+		//Gerente pessoa jurídica
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 	    if(cadastro[i].atendimento == 4 && x == 4){
-	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa jur�dica");
+	        strcpy(cadastro[i].tipoAtendimento, "Gerente pessoa jurídica");
 	        printf("Nome: %s\n", cadastro[i].nome);
     	  printf("CPF: %03d.%03d.%03d-%0d\n", cadastro[i].cpf.bloco1, 
 					      cadastro[i].cpf.bloco2, 
@@ -318,12 +377,36 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 	printf("Bem vindo ao caixa!\n\n");
 
 
+<<<<<<< HEAD
   //Verifica se o CPF est� cadastrado:
 	
 	
 	printf("Digite seu CPF para confirma��o:\n");
 	scanf("%3d%3d%3d%2d", &(cF->bloco1),&(cF->bloco2),
 	&(cF->bloco3), &(cF->bloco4)); 
+=======
+  //Verifica se o CPF está cadastrado:
+	
+	
+	printf("Digite seu CPF para confirmação:\n");
+	scanf("%3d%3d%3d%2d", &(cF->bloco1),&(cF->bloco2),
+	&(cF->bloco3), &(cF->bloco4));
+
+
+
+	 //Verifica se o CPF está cadastrado:
+	char cpfcmp2[MaxCpf];
+	
+	printf("Digite seu CPF para confirmaÃ§Ã£o:\n");
+	scanf("%s", cpfcmp2);
+	fflush(stdin);
+	printf("\n\n");
+	system("pause");
+	printf("\n\n");
+	
+    
+    
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
     
     /* 
     Se o CPF j� foi cadastrado, o cliente poder� realizar:
@@ -340,6 +423,7 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 			cadastro[i].cpf.bloco4 == cF->bloco4) != 0){
 			cpfEncontrado = true;
 				
+<<<<<<< HEAD
 			printf("Ol� %s, o que deseja fazer?\n\n", cadastro[i].nome);
 			printf("1 - Saque:\n");
 			printf("2 - Dep�sito:\n");
@@ -394,6 +478,115 @@ void AbreCaixa(Cadastro *cadastro, Caixa *caixa, CpfFornecido *cF){
 		}
 	
 			
+=======
+				printf("Olá %s, o que deseja fazer?\n\n", cadastro[i].nome);
+			    	printf("1 - Saque:\n");
+				printf("2 - Depósito:\n");
+				printf("3 - Saldo:\n");
+				printf("4 - Sair...\n\n");
+				scanf("%d", &opc);
+				fflush(stdin);
+				printf("\n\n");
+			
+		      
+	    
+		    		switch(opc){
+		    			   case 1:
+						   printf("Quanto deseja sacar?\n\n");
+						   scanf("%d", &caixa[i].saque);
+						   fflush(stdin);
+						   printf("\n");
+						   if (caixa[i].saldo >= caixa[i].saque) {
+						       caixa[i].saldo -= caixa[i].saque;
+						       printf("Saque realizado com sucesso!\n\n");
+						   } else {
+						       printf("Saldo insuficiente! Faça um depósito!\n\n");
+						   }
+						   system("pause");
+							break;
+		
+				        
+					    case 2: printf("quanto deseja depositar?\n\n");
+					            scanf("%d", &caixa[i].deposito);
+					            fflush(stdin);
+					            printf("\n");
+					            caixa[i].saldo += caixa[i].deposito;
+					            printf("Deposito realizado com sucesso!\n\n");
+					            system("pause");
+					        	break;
+				        
+					    case 3: printf("Seu saldo atual é: R$ %d\n\n", caixa[i].saldo);
+					        	system("pause");
+					        	break;
+					        
+					    case 4: printf("Saindo do sistema...\n\n");
+					        	break;
+					        
+					    default: printf("opção inválida!\n\n");
+					        	 system("pause");    
+					}    
+		}else{
+			printf("Cpf não encontrado");
+			system ("pause");
+
+    	
+    	if(strcmp(cadastro[i].cpf, cpfcmp2) == 0){
+    		printf("Olá %s, o que deseja fazer?\n\n", cadastro[i].nome);
+	    	printf("1 - Saque:\n");
+		    printf("2 - Depósito:\n");
+		    printf("3 - Saldo:\n");
+		    printf("4 - Sair...\n\n");
+		    scanf("%d", &opc);
+		    fflush(stdin);
+		    printf("\n\n");
+		
+	      
+    
+	    	switch(opc){
+		        case 1:
+					    printf("Quanto deseja sacar?\n\n");
+					    scanf("%d", &caixa[i].saque);
+					    fflush(stdin);
+					    printf("\n");
+					    if (caixa[i].saldo >= caixa[i].saque) {
+					        caixa[i].saldo -= caixa[i].saque;
+					        printf("Saque realizado com sucesso!\n\n");
+					    } else {
+					        printf("Saldo insuficiente! FaÃ§a um depÃ³sito!\n\n");
+					    }
+					    system("pause");
+					    break;
+
+		        
+		        case 2: printf("quanto deseja depositar?\n\n");
+		                scanf("%d", &caixa[i].deposito);
+		                fflush(stdin);
+		                printf("\n");
+		                caixa[i].saldo += caixa[i].deposito;
+		                printf("Deposito realizado com sucesso!\n\n");
+		                system("pause");
+		        	break;
+		        
+		        case 3: printf("Seu saldo atual Ã©: R$ %d\n\n", caixa[i].saldo);
+		        		system("pause");
+		        	break;
+		        
+		        case 4: printf("Saindo do sistema...\n\n");
+		        	break;
+		        
+		        default: printf("opÃ§Ã£o invÃ¡lida!\n\n");
+		        	system("pause");
+		        
+			}
+
+        }
+		if(strcmp(cadastro[i].cpf, cpfcmp2) != 0){
+    		printf("CPF não encontrado!\n\n");
+    		system("pause");
+
+		}
+	
+>>>>>>> fc5cb1e2e6f8a80a5db2a337ed512933d316b4a4
 			
 		system("cls");	
 			
