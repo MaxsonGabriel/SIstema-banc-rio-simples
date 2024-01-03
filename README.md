@@ -39,5 +39,7 @@ Tipo Atendimento - 2 - Gerente Pessoa Jurídica
 
 ## Requerimento
 Para rodar o sistema de funcionários precisar ter o compilador **GNU GCC** instalado
+## Linguagem C
+## Projeto para estudo
 
 
